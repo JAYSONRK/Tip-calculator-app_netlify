@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Jost:ital,wght@0,400;0,600;0,700;1,500&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:ital,wght@0,500;1,200&family=Open+Sans&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Playpen+Sans:wght@700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,400;0,600;0,700;1,800&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+
+:root {
+  /* ### Primary */
+  --Strong-cyan: hsl(172, 67%, 45%);
+  /* ### Neutral */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Space Mono, sans-serif;
+  font-size: 24px;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-grayish-cyan);
+}
+
+.logo {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background-color: var(--White);
+  padding-bottom: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.inputs {
+  padding: 1rem 1.5rem;
+}
+
+.inputs label {
+  font-size: 0.7rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+.bill, .people {
+  position: relative;
+}
+
+.bill input, .people input {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  margin: 0.3rem 0 1rem;
+  text-align: right;
+  color: var(--Very-dark-cyan);
+  padding-right: 0.8rem;
+  border-radius: 0.2rem;
+}
+
+.bill input:hover, .people input:hover {
+  outline: 2px solid var(--Strong-cyan);
+  cursor: pointer;
+}
+
+.bill img, .people img {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+
+.tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;;
+}
+
+.tip button {
+  background-color: var(--Very-dark-cyan);
+  width: 47.5%;
+  height: 2rem;
+  color: var(--White);
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 0.6rem;
+}
+
+.tip button:hover {
+  background-color:  var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+}
+
+.tip input {
+  width: 47.5%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 0.6rem;
+  background-color: var(--Very-light-grayish-cyan);
+  text-align: right;
+  padding-right: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.tip input:hover {
+  border: 2px solid var(--Strong-cyan);
+  cursor: pointer;
+}
+
+.outputs {
+  background-color: var(--Very-dark-cyan);
+  padding: 1rem;
+  margin: 0 1rem;
+  border-radius: 0.5rem;
+}
+
+.tip-amount, .total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.tip-amount p, .total-amount p {
+  font-size: 0.65rem;
+  color: var(--White);
+}
+
+.tip-amount span, .total-amount span {
+  font-size: 0.55rem;
+  color: var(--Grayish-cyan);
+}
+
+.tip-amount h2, .total-amount h2 {
+  font-size: 1.25rem;
+  color: var(--Strong-cyan);
+}
+
+.outputs button {
+  width: 100%;
+  height: 2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+.outputs button:hover {
+  background-color: hsl(172, 43%, 56%);
+  cursor: pointer;
+}
+
+.headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  font-size: 0.6rem;
+  color: #f54747e3;
+}
+
+.errorborder {
+  border: 2px solid #f54747e3;
+}
+
+@media (min-width: 640px) {
+  .logo {
+    margin: 2rem 0;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 900px;
+    padding: 0;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .inputs {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  .tip button, .tip input {
+    width: 30%;
+  }
+
+  .outputs {
+    margin: 1.5rem 1.5rem 1.5rem 2rem;
+    padding:  1.5rem;
+  }
+
+  .outputs button {
+    margin-top: 4rem;
+  }
+
+  .tip-amount, .total-amount {
+    padding-top: 1rem;
+  }
+
+  .tip-amount h2, .total-amount h2 {
+    font-size: 1.8rem;
+  }
+}
